@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="B4.PE2.ManuVanLook.Pages.ConversionPage"
+             BackgroundColor="LightBlue">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0, 20, 0, 0" />
+            <On Platform="Android, UWP" Value="0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        
+        <StackLayout x:Name="stackConversions" VerticalOptions="CenterAndExpand" >
+            <Entry x:Name="entryHerkomst" Placeholder="Put Something here" FontSize="Title" HorizontalOptions="CenterAndExpand" Keyboard="Numeric"></Entry>
+
+            <StackLayout x:Name="stackPicker1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Picker x:Name="conversionHerkomst"></Picker>
+                <Image x:Name="imgArrow" Source="arrow.png"></Image>
+                <Picker x:Name="conversionToekomst" ></Picker>
+            </StackLayout>
+            <Button x:Name="btnConvert" Text="Convert" Clicked="BtnConvert_Clicked"></Button>
+            <Label x:Name="lblToekomst" Text="nothing converted yet" FontSize="Title" HorizontalOptions="CenterAndExpand"></Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

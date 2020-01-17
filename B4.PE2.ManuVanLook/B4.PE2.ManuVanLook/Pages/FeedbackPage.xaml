@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="LightBlue"
+             x:Class="B4.PE2.ManuVanLook.Pages.FeedbackPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" VerticalOptions="Center">
+                <Label Text="Receiver email" />
+                <Entry x:Name="txtEmail" Placeholder="Enter a email of the receiver" Keyboard="Email" />
+                <Label x:Name="lblErrorEmail" StyleClass="errormessage" Text="enter a email" IsVisible="False" TextColor="Red"/>
+                <Label Text="Name"/>
+                <Entry x:Name="txtName" Placeholder="Enter a subject" />
+                <Label x:Name="lblErrorName" StyleClass="errormessage" Text="enter a Name" IsVisible="False" TextColor="Red" />
+                <Label Text="FamilyName"/>
+                <Entry x:Name="txtFamName" Placeholder="Enter a subject" />
+                <Label x:Name="lblFamName" StyleClass="errormessage" Text="enter a family name" IsVisible="False" TextColor="Red"/>
+                <Label Text="Subject" />
+                <Entry x:Name="txtSubject" Placeholder="put your feedback here" />
+                <Label x:Name="lblSubject" StyleClass="errormessage" Text="enter a subject" IsVisible="False" TextColor="Red" />
+                <Label Text="question"/>
+                <Entry x:Name="txtQuestion" Placeholder="put your pro's here"/>
+                <Label Text="Bug report"/>
+                <Entry x:Name="txtBugReport" Placeholder="put your con's here"/>
+                <Label Text="other"/>
+                <Entry x:Name="txtOther" Placeholder="put your con's here"/>
+                <Button x:Name="btnSubmit" Text="submit feedback" Clicked="btnSubmit_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

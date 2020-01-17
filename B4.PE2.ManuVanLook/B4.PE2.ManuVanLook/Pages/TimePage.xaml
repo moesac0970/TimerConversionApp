@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:model="clr-namespace:B4.PE2.ManuVanLook.Domain.Models"
+             x:Class="B4.PE2.ManuVanLook.Pages.TimePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="TimeLapPage" Text="00:00:00"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                BackgroundColor="LightGray" 
+                FontSize="Title"/>
+            <ScrollView BackgroundColor="LightGray" HeightRequest="200" Orientation="Vertical">
+                <!--<StackLayout x:Name="StackLaps"
+                         HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand">
+                </StackLayout>-->
+                <ListView x:Name="lvLaps">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Position}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                                        <Label Text="{Binding Diffrence}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                                    </StackLayout>
+                                    <Label Text="{Binding Time}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+ 
+            </ScrollView>
+            <Button x:Name="btnStart"  Text="Start / stop" Clicked="BtnStart_Clicked"/>
+            <Button x:Name="btnLap" Text="lap" Clicked="BtnLap_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

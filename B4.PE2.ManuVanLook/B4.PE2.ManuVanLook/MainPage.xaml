@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Style="{StaticResource PlatformPaddedContentPageStyle}"
+             x:Class="B4.PE2.ManuVanLook.MainPage"
+             Title="PE 2 programeren 5"
+             BackgroundColor="LightBlue">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0, 20, 0, 0" />
+            <On Platform="Android, UWP" Value="0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" >
+            <Label Text="The only app you will ever need" HorizontalTextAlignment="Center" HeightRequest="80" FontSize="Title">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Lobster-Regular" />
+                        <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
+                        <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Button x:Name="TimePage" Clicked="TimePage_Clicked" Style="{DynamicResource CancelButtonStyle}" Text="Time" ></Button>
+            <Button x:Name="ConversionPage" Clicked="ConversionPage_Clicked" Style="{DynamicResource CancelButtonStyle}" Text="Conversions" ></Button>
+            <Button x:Name="FeedbackPage" Clicked="FeedbackPage_Clicked" Style="{DynamicResource CancelButtonStyle}" Text="Feedback Form" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
